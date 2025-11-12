@@ -444,7 +444,8 @@ async function enviarPedido() {
   const nunberCliente  = '5535999810371';
   const nunberTeste = '5543988337699'; 
   const nunberTeste2 = '5515997496523'
-  const url = `https://wa.me/${nunberTeste}?text=${mensagem}`;
+  const nunberTeste3 = '5535991964475'
+  const url = `https://wa.me/${nunberTeste3}?text=${mensagem}`;
 // abre o WhatsApp em nova aba
 
 window.location.href = url;
