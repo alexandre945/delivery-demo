@@ -354,7 +354,7 @@ async function enviarPedido() {
   const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
   if (carrinho.length === 0) return alert('Carrinho vazio');
 
-  let mensagem = '*🛒 Pedido DOUGÃO LANCHES*%0A%0A';
+  let mensagem = '*🛒 Pedido AMIGÃO LANCHES*%0A%0A';
   let total = 0;
 
   // Monta os itens
