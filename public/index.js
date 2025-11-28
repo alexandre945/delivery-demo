@@ -457,34 +457,34 @@ window.location.href = url;
   }, 200);
   
   // Organiza o pedido para salvar no jsonBin
-  const pedidoParaSalvar = {
-    cliente: {
-      nome,
-      whatsapp: zap,
-      endereco: tipoPedido === 'entrega' ? { bairro, rua, numero, referencia } : null,
-    },
-    carrinho,
-    pagamento: {
-      tipo: formaPagamento,
-      detalhe: pagamentoTexto
-    },
-    tipoPedido,
-    observacao,
-    total,
-    mensagem
-  };
+  // const pedidoParaSalvar = {
+  //   cliente: {
+  //     nome,
+  //     whatsapp: zap,
+  //     endereco: tipoPedido === 'entrega' ? { bairro, rua, numero, referencia } : null,
+  //   },
+  //   carrinho,
+  //   pagamento: {
+  //     tipo: formaPagamento,
+  //     detalhe: pagamentoTexto
+  //   },
+  //   tipoPedido,
+  //   observacao,
+  //   total,
+  //   mensagem
+  // };
 
-  // Envia para backend
-  try {
-    await fetch("/api/pedidos", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(pedidoParaSalvar)
-    });
-    console.log("✅ Pedido salvo no banco!");
-  } catch (err) {
-    console.error("Erro ao salvar no banco:", err);
-  }
+  // // Envia para backend
+  // try {
+  //   await fetch("/api/pedidos", {
+  //     method: "POST",
+  //     headers: { "Content-Type": "application/json" },
+  //     body: JSON.stringify(pedidoParaSalvar)
+  //   });
+  //   console.log("✅ Pedido salvo no banco!");
+  // } catch (err) {
+  //   console.error("Erro ao salvar no banco:", err);
+  // }
 
   // Limpa carrinho
   localStorage.removeItem('carrinho');
